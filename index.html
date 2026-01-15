@@ -4,14 +4,35 @@
 <meta charset="UTF-8">
 <title>画像切替ギャラリー</title>
 <style>
-  img {
-    display: none;       /* 最初は非表示 */
-    max-width: 300px;    /* 横幅最大300px */
+  body {
+    font-size: 22px;        /* 文字を大きく */
+    text-align: center;     /* 文字と画像を中央揃え */
+    margin: 20px;
+    background-color: #f9f9f9; /* 背景色で見やすく */
   }
+
   button {
-    margin: 2px;
-    padding: 5px 10px;
+    font-size: 20px;        /* ボタン文字を大きく */
+    padding: 12px 25px;     /* ボタン自体も大きく */
+    margin: 5px;
     cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #333;
+    background-color: #eee;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #ddd; /* ホバーで色変化 */
+  }
+
+  img {
+    display: none;          /* 最初は非表示 */
+    max-width: 600px;       /* 画像を大きく表示 */
+    height: auto;           /* 縦横比を維持 */
+    border: 2px solid #333; 
+    border-radius: 10px;
+    margin-top: 20px;
   }
 </style>
 </head>
@@ -46,4 +67,7 @@ function showImage(id) {
 </script>
 
 </body>
+</html>
+</body>
+
 </html>
