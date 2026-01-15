@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>画像切替ギャラリー</title>
+<style>
+  img {
+    display: none;       /* 最初は非表示 */
+    max-width: 300px;    /* 横幅最大300px */
+  }
+  button {
+    margin: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- ボタン -->
+<button onclick="showImage('img1')">画像1</button>
+<button onclick="showImage('img2')">画像2</button>
+<button onclick="showImage('img3')">画像3</button>
+<button onclick="showImage('img4')">画像4</button>
+<button onclick="showImage('img5')">画像5</button>
+<button onclick="showImage('img6')">画像6</button>
+<button onclick="showImage('img7')">画像7</button>
+
+<br><br>
+
+<!-- 画像 -->
+<img id="img1" src="https://raw.githubusercontent.com/watapiro7colors-dot/image/main/2.jpg">
+<img id="img2" src="https://raw.githubusercontent.com/watapiro7colors-dot/image/main/3.jpg">
+<img id="img3" src="https://raw.githubusercontent.com/watapiro7colors-dot/image/main/4.jpg">
+<img id="img4" src="https://raw.githubusercontent.com/watapiro7colors-dot/image/main/5.jpg">
+<img id="img5" src="https://raw.githubusercontent.com/watapiro7colors-dot/image/main/6.jpg">
+<img id="img6" src="https://raw.githubusercontent.com/watapiro7colors-dot/image/main/7.jpg">
+<img id="img7" src="https://raw.githubusercontent.com/watapiro7colors-dot/image/main/8.jpg">
+
+<script>
+function showImage(id) {
+  const images = document.querySelectorAll("img");
+  images.forEach(img => img.style.display = "none"); // 全て非表示
+  document.getElementById(id).style.display = "block"; // 選んだ画像だけ表示
+}
+</script>
+
+</body>
+</html>
